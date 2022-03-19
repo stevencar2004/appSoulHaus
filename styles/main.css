@@ -1,0 +1,142 @@
+:root {
+  --color_orange: #f76540;
+  --color_orange_efect: #c45438;
+  --color_white: #fff;
+  --color_gray: #ededed;
+  --color_bg_gray: #979797;
+  --color_dark: #484848;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+}
+
+.hero--hidde {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in;
+}
+
+.hero__wrapper {
+  width: 100%;
+}
+
+.hero__picture {
+  width: 100%;
+  height: 250px;
+  background: var(--color_bg_gray);
+}
+
+.hero__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__info {
+  width: 100%;
+  padding: 1rem 0.7rem;
+}
+
+.hero__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero__text {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 25px;
+  color: var(--color_dark);
+}
+
+.hero__btn {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn--orange {
+  background-color: var(--color_orange);
+  color: var(--color_white);
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 760px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__wrapper {
+    width: 95%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas: "info banner";
+  }
+  .hero__info {
+    grid-area: info;
+    margin-top: 1rem;
+    padding: 0px 1rem;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__text,
+  .hero__btn {
+    font-size: 1.15rem;
+  }
+  .hero__picture {
+    grid-area: banner;
+    height: 100%;
+    border-radius: 0.6rem;
+  }
+  .hero__img {
+    border-radius: 0.6rem;
+  }
+  .hero__btn:hover {
+    color: var(--color_white);
+    background-color: var(--color_bg_gray);
+    transition: all 0.3s ease-in;
+  }
+  .btn--orange:hover {
+    background-color: var(--color_orange_efect);
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .hero__wrapper {
+    width: 85%;
+    padding: 1.2rem;
+  }
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__text {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__wrapper {
+    width: 80%;
+  }
+  .hero__img {
+    height: 120%;
+  }
+}

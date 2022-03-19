@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TecnicalTest SoulHaus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/modal.css" />
+  <link rel="stylesheet" href="styles/section.css" />
+  <body>
+    <div class="modal modal--hidde" id="modal">
+      <div class="modal__wrapper">
+        <p class="modal__result" id="result"></p>
+      </div>
+    </div>
+
+    <main class="hero" id="home">
+      <div class="hero__wrapper">
+        <div class="hero__picture">
+          <img src="./assets/banner.jpg" alt="banner-SoulHaus" class="hero__img" />
+        </div>
+
+        <div class="hero__info">
+          <h2 class="hero__title">Esta es mi prueba técnica en SoulHaus</h2>
+
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui
+            inventore ut voluptate eius aut ipsam, reprehenderit nihil, pariatur saepe id
+            dolor, velit fugiat! Dicta non quae delectus nostrum, ex provident mollitia
+            adipisci modi ratione facere illo nesciunt reprehenderit,
+          </p>
+
+          <div class="hero__controlls">
+            <button class="hero__btn btn--orange" id="btn-diagonal">Diagonal</button>
+            <button class="hero__btn" id="btn-distancia">Distancia</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="section section__diagonal" id="diagonal">
+      <div class="section__header">
+        <div class="section__picture">
+          <img src="./assets/banner.jpg" alt="header-SoulHaus" class="section__img" />
+        </div>
+
+        <div class="section__info">
+          <h3 class="section__title">Diagonal</h3>
+          <p class="section__text">
+            Aqui puede calcular la diferencia entre las dos diagonales de una matriz
+          </p>
+        </div>
+      </div>
+
+      <div class="section__body">
+        <div class="section__form">
+          <textarea
+            name="field-matriz"
+            id="field-matriz"
+            cols="30"
+            rows="10"
+            placeholder="Ingresa la matriz aquí"
+            class="section__field"
+          ></textarea>
+        </div>
+        <button class="section__btn btn--orange" id="btnResultDiagonal">Calcular</button>
+      </div>
+    </section>
+
+    <section class="section section__distancia" id="distancia">
+      <div class="section__header">
+        <div class="section__picture">
+          <img src="./assets/banner.jpg" alt="header-SoulHaus" class="section__img" />
+        </div>
+
+        <div class="section__info">
+          <h3 class="section__title">Distancia</h3>
+          <p class="section__text">Aqui puede calcular la distancia entre dos puntos</p>
+        </div>
+      </div>
+
+      <div class="section__body">
+        <div class="section__form">
+          <div class="section__group">
+            <h3 class="section__label">Punto 1</h3>
+
+            <div class="section__coordinates">
+              <input
+                type="text"
+                placeholder="X"
+                class="section__field"
+                name="sectionField"
+                id="point1_x"
+              />
+              <input
+                type="text"
+                placeholder="Y"
+                class="section__field"
+                name="sectionField"
+                id="point1_y"
+              />
+            </div>
+          </div>
+
+          <div class="section__group">
+            <h3 class="section__label">Punto 2</h3>
+
+            <div class="section__coordinates">
+              <input
+                type="text"
+                placeholder="X"
+                class="section__field"
+                name="sectionField2"
+                id="point2_x"
+              />
+              <input
+                type="text"
+                placeholder="Y"
+                class="section__field"
+                name="sectionField2"
+                id="point2_y"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button class="section__btn btn--orange" id="btnCalcularDistancia">
+          Calcular
+        </button>
+      </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/diagonal/index.js"></script>
+    <script src="./js/distancia/index.js"></script>
+  </body>
+</html>
